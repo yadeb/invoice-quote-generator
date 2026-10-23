@@ -33,6 +33,7 @@
   ],
   "scripts": {
     "build": "tsup && cp src/react/styles.css dist/react/styles.css",
+    "prepare": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "demo": "vite --config demo/vite.config.ts",
