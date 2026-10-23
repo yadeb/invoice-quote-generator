@@ -1,0 +1,366 @@
+.qip-root {
+  --qip-primary: #1e648c;
+  --qip-primary-fg: #ffffff;
+  --qip-fg: #2c2c2c;
+  --qip-muted: #6b6b6b;
+  --qip-border: #d4d4d4;
+  --qip-danger: #b42318;
+  --qip-bg-soft: rgba(255, 255, 255, 0.7);
+  --qip-radius: 0.75rem;
+  --qip-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --qip-heading: Georgia, "Times New Roman", serif;
+
+  box-sizing: border-box;
+  color: var(--qip-fg);
+  font-family: var(--qip-font);
+  margin: 0 auto;
+  max-width: 32rem;
+  min-height: 100%;
+  padding: 1rem 1rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.qip-root *,
+.qip-root *::before,
+.qip-root *::after {
+  box-sizing: border-box;
+}
+
+.qip-heading {
+  font-family: var(--qip-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--qip-primary);
+}
+
+.qip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.qip-header-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.qip-header-title {
+  font-family: var(--qip-heading);
+  font-size: 1.125rem;
+  line-height: 1;
+  color: var(--qip-primary);
+  margin: 0;
+}
+
+.qip-header-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--qip-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qip-progress {
+  height: 0.375rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--qip-primary) 15%, transparent);
+}
+
+.qip-progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--qip-primary);
+  transition: width 0.5s ease-out;
+}
+
+.qip-main {
+  flex: 1;
+}
+
+.qip-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.qip-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.qip-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.qip-hint {
+  font-weight: 400;
+  color: var(--qip-muted);
+}
+
+.qip-muted {
+  color: var(--qip-muted);
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+}
+
+.qip-error {
+  color: var(--qip-danger);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.qip-alert {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--qip-danger) 10%, transparent);
+  color: var(--qip-danger);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.qip-input,
+.qip-select,
+.qip-textarea {
+  width: 100%;
+  border: 1px solid var(--qip-border);
+  border-radius: 0.5rem;
+  background: transparent;
+  padding: 0.625rem 0.625rem;
+  font-size: 1rem;
+  color: inherit;
+  outline: none;
+}
+
+.qip-input,
+.qip-select {
+  height: 3rem;
+}
+
+.qip-textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.qip-input:focus-visible,
+.qip-select:focus-visible,
+.qip-textarea:focus-visible {
+  border-color: var(--qip-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--qip-primary) 25%, transparent);
+}
+
+.qip-input[aria-invalid="true"],
+.qip-select[aria-invalid="true"],
+.qip-textarea[aria-invalid="true"] {
+  border-color: var(--qip-danger);
+}
+
+.qip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--qip-primary);
+  color: var(--qip-primary-fg);
+}
+
+.qip-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.qip-btn-outline {
+  background: transparent;
+  color: var(--qip-fg);
+  border-color: var(--qip-border);
+}
+
+.qip-btn-ghost {
+  background: transparent;
+  color: var(--qip-danger);
+  border-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+}
+
+.qip-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.qip-actions .qip-btn:first-child {
+  flex: 1;
+}
+
+.qip-actions .qip-btn:last-child {
+  flex: 1.4;
+}
+
+.qip-card {
+  border: 1px solid color-mix(in srgb, var(--qip-border) 80%, transparent);
+  border-radius: var(--qip-radius);
+  background: var(--qip-bg-soft);
+  padding: 1rem;
+}
+
+.qip-total-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--qip-radius);
+  background: color-mix(in srgb, var(--qip-primary) 10%, transparent);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.qip-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 1.5rem 0.25rem;
+}
+
+.qip-logo-wrap {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.qip-logo-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scale(1.25);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--qip-primary) 15%, transparent);
+  filter: blur(40px);
+}
+
+.qip-title-lg {
+  font-family: var(--qip-heading);
+  font-size: 1.875rem;
+  color: var(--qip-primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.qip-blurb {
+  margin: 0.75rem 0 0;
+  max-width: 24rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--qip-fg) 90%, transparent);
+}
+
+.qip-cta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 24rem;
+  margin-top: 2rem;
+}
+
+.qip-link {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--qip-primary);
+  text-underline-offset: 4px;
+}
+
+.qip-link:hover {
+  text-decoration: underline;
+}
+
+.qip-line-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qip-line-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.qip-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.qip-dl {
+  margin: 0.5rem 0 0;
+}
+
+.qip-dl-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.qip-dl-row dt {
+  color: var(--qip-muted);
+}
+
+.qip-dl-row dd {
+  margin: 0;
+  font-weight: 500;
+  text-align: right;
+}
+
+.qip-review-lines {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.qip-review-lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--qip-border) 70%, transparent);
+  font-size: 0.875rem;
+}
+
+.qip-check-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--qip-primary);
+}
+
+.qip-filename {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  word-break: break-all;
+}
