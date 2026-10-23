@@ -4,6 +4,14 @@
   "description": "Config-driven quote/invoice PDF generator and React wizard",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yadeb/invoice-quote-generator.git"
+  },
+  "homepage": "https://github.com/yadeb/invoice-quote-generator#readme",
+  "bugs": {
+    "url": "https://github.com/yadeb/invoice-quote-generator/issues"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {

@@ -2,10 +2,14 @@
 
 Config-driven **quote / invoice PDF** generator and optional **React wizard**. Hosts supply organisation branding, branch lists, storage, and share behaviour — this package has no organisation-specific defaults.
 
+**Repo:** [github.com/yadeb/invoice-quote-generator](https://github.com/yadeb/invoice-quote-generator)
+
 ## Install
 
 ```bash
 npm install quote-invoice-pdf
+# or from GitHub before npm publish:
+# npm install github:yadeb/invoice-quote-generator
 ```
 
 Peer dependencies: `react`, `react-dom` (for the wizard).
